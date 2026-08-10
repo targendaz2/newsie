@@ -11,7 +11,7 @@
 
 <header>
   <div>
-    <h1>Today</h1>
+    <h1>News</h1>
     <p>{unreadCount} unread</p>
   </div>
   <div class="actions">
