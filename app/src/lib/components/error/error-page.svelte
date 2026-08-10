@@ -21,7 +21,7 @@
         glyph: '¶',
         headline: 'This story got away.',
         message: "The page you were after isn't here — it may have been unsubscribed, moved, or never made the edition.",
-        primary: 'Back the news',
+        primary: 'Back to the news',
         secondary: 'Search the feed',
       },
       '503': {
