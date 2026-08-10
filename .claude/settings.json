@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__svelte__svelte-autofixer"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "cloudflare-api",
+    "drizzle-kit",
+    "svelte"
+  ],
+  "enabledPlugins": {
+    "cloudflare@claude-plugins-official": true,
+    "svelte@svelte": true
+  },
+  "extraKnownMarketplaces": {
+    "cloudflare": {
+      "source": {
+        "source": "github",
+        "repo": "cloudflare/skills"
+      }
+    },
+    "svelte": {
+      "source": {
+        "source": "github",
+        "repo": "sveltejs/ai-tools"
+      }
+    }
+  }
+}
