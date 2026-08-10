@@ -1,8 +1,7 @@
 <script lang="ts">
+  import { TypeBadge } from '$components/data';
   import type { NewsItem } from '$lib/types';
   import { formatDistanceToNow, formatRFC3339 } from 'date-fns';
-
-  import { TypeBadge } from '../data';
 
   interface Props {
     /** Source story. */

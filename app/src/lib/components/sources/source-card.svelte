@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Toggle } from '../controls';
-  import { TypeBadge } from '../data';
+  import { Toggle } from '$components/controls';
+  import { TypeBadge } from '$components/data';
 
   interface Props {
     /** Source type shown in the type label. */
