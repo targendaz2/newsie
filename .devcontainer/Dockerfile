@@ -29,6 +29,18 @@ RUN /bin/sh -c set -eux; \
   apt-get clean; \
   rm -rf /var/lib/apt/lists/*
 
+# Install Task
+RUN /bin/sh -c set -eux; \
+  curl -1sLf 'https://dl.cloudsmith.io/public/task/task/setup.deb.sh' | sudo -E bash; \
+  apt-get update; \
+  apt-get install -y --no-install-recommends task; \
+  apt-get clean; \
+  rm -rf /var/lib/apt/lists/*
+
+# Enable Corepack
+ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
+RUN corepack enable
+
 # Install Playwright browsers
 ARG PLAYWRIGHT_VERSION=1.62.1
 RUN npx -y playwright@${PLAYWRIGHT_VERSION} install --with-deps
@@ -80,8 +92,6 @@ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/
   -p yarn \
   -p https://github.com/targendaz2/taskfile \
   -p https://github.com/zsh-users/zsh-syntax-highlighting \
-  -a "source /usr/share/doc/fzf/examples/key-bindings.zsh" \
-  -a "source /usr/share/doc/fzf/examples/completion.zsh" \
   -a "export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.bash_history" \
   -x
 
