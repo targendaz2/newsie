@@ -31,7 +31,10 @@
         "svelte.svelte-vscode",
         "task.vscode-task",
         "vitest.explorer",
-        "redhat.vscode-yaml"
+        "redhat.vscode-yaml",
+        "mads-hartmann.bash-ide-vscode",
+        "ms-azuretools.vscode-containers",
+        "timonwong.shellcheck"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh",
