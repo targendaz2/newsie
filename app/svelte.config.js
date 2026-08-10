@@ -13,6 +13,9 @@ const config = {
       $components: './src/lib/components',
     },
     experimental: { remoteFunctions: true },
+    output: {
+      preloadStrategy: 'preload-js',
+    },
   },
 };
 
