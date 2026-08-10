@@ -69,6 +69,7 @@ for domain in \
     "api.anthropic.com" \
     "marketplace.visualstudio.com" \
     "vscode.blob.core.windows.net" \
+	"dash.cloudflare.com" \
 	"mcp.cloudflare.com" \
 	"mcp.svelte.dev" \
 	"vercel-dns.com" \

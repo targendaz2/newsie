@@ -24,6 +24,7 @@ RUN /bin/sh -c set -eux; \
     dnsutils \
     aggregate \
     jq \
+    xdg-utils \
     nano \
     vim; \
   apt-get clean; \
