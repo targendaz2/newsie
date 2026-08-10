@@ -1,7 +1,6 @@
 @import "normalize.css";
 @import "tokens/fonts.css";
 @import "tokens/typography.css";
-@import "tokens/spacing.css";
 @import "tokens/radii.css";
 @import "tokens/shadows.css";
 
@@ -27,6 +26,7 @@
   --color-accent-strong: #8f2c22;
   --color-toast-bg: #26231d;
   --color-toast-fg: #f4f1ea;
+
   --color-surface-page: var(--color-paper);
   --color-surface-card: var(--color-card);
   --color-surface-desk: var(--color-canvas);
@@ -39,6 +39,19 @@
   --color-brand-hover: var(--color-accent-strong);
   --color-chip-bg: var(--color-chip);
   --color-focus-ring: var(--color-accent);
+
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 24px;
+  --spacing-6: 32px;
+  --spacing-7: 40px;
+
+  --spacing-gutter: var(--spacing-5);
+  --spacing-row-pad-y: 17px;
+  --spacing-row-pad-y-compact: 12px;
+  --spacing-control-gap: var(--spacing-2);
 }
 
 body {
