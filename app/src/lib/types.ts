@@ -31,6 +31,9 @@ export interface NewsItem {
   /** Two-line preview of the news item body. */
   excerpt?: string;
 
+  /** Full story body, as paragraphs. */
+  body?: string[];
+
   url: string;
 
   /** Time when the news item was published. */
