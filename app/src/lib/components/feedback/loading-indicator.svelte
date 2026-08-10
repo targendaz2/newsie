@@ -19,7 +19,7 @@
     justify-content: center;
     gap: 10px;
     padding: 16px;
-    color: var(--text-muted);
+    color: var(--color-text-muted);
     font-size: var(--text-ctrl);
   }
 
@@ -27,8 +27,8 @@
     display: inline-block;
     width: 15px;
     height: 15px;
-    border: 2px solid var(--border-hairline);
-    border-top-color: var(--brand);
+    border: 2px solid var(--color-border-hairline);
+    border-top-color: var(--color-brand);
     border-radius: 50%;
     animation: spin 0.7s linear infinite;
   }

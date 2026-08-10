@@ -25,11 +25,11 @@
   }
 
   .toast {
-    background: var(--toast-bg);
-    color: var(--toast-fg);
-    font-family: var(--font-ui);
+    background: var(--color-toast-bg);
+    color: var(--color-toast-fg);
+    font-family: var(--font-sans);
     font-size: 13.5px;
-    font-weight: var(--weight-medium);
+    font-weight: var(--font-weight-medium);
     padding: 11px 20px;
     border-radius: var(--radius-toast);
     box-shadow: var(--shadow-toast);

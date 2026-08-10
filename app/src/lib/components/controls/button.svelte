@@ -27,8 +27,8 @@
   /* Base button styles */
   button {
     display: inline-block;
-    font-family: var(--font-ui);
-    font-weight: var(--weight-semibold);
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-semibold);
     cursor: pointer;
     transition:
       color 0.15s ease,
@@ -37,7 +37,7 @@
   }
 
   button:focus-visible {
-    outline: 2px solid var(--focus-ring);
+    outline: 2px solid var(--color-focus-ring);
     outline-offset: 2px;
   }
 
@@ -53,41 +53,41 @@
     background: none;
     padding: 0;
     font-size: var(--text-ctrl);
-    color: var(--brand);
+    color: var(--color-brand);
   }
 
   .link:hover:not(:disabled) {
-    color: var(--brand-hover);
+    color: var(--color-brand-hover);
   }
 
   /* Outline button styles */
   .outline {
-    border: 1px solid var(--border-hairline);
-    background: var(--card);
-    color: var(--text-muted);
+    border: 1px solid var(--color-border-hairline);
+    background: var(--color-card);
+    color: var(--color-text-muted);
     font-size: var(--text-ctrl);
     padding: 10px 18px;
     border-radius: var(--radius-pill);
   }
 
   .outline:hover:not(:disabled) {
-    color: var(--text-body);
-    border-color: var(--brand);
+    color: var(--color-text-body);
+    border-color: var(--color-brand);
   }
 
   /* Dashed button styles */
   .dashed {
     width: 100%;
-    border: 1.5px dashed var(--dashed);
+    border: 1.5px dashed var(--color-dashed);
     background: transparent;
-    color: var(--text-muted);
+    color: var(--color-text-muted);
     font-size: var(--text-ui);
     padding: 15px;
     border-radius: var(--radius-card);
   }
 
   .dashed:hover:not(:disabled) {
-    color: var(--text-body);
-    border-color: var(--brand);
+    color: var(--color-text-body);
+    border-color: var(--color-brand);
   }
 </style>

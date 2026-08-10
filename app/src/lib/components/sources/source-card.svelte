@@ -36,7 +36,7 @@
     display: flex;
     gap: 12px;
     padding: 15px 22px;
-    border-bottom: 1px solid var(--border-hairline);
+    border-bottom: 1px solid var(--color-border-hairline);
     align-items: center;
   }
 
@@ -47,17 +47,17 @@
 
   .name {
     font-size: 15px;
-    font-weight: var(--weight-semibold);
-    color: var(--text-body);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-body);
   }
 
   .name.muted {
-    color: var(--text-faint);
+    color: var(--color-text-faint);
   }
 
   .meta {
     font-size: var(--text-meta);
-    color: var(--text-muted);
+    color: var(--color-text-muted);
     margin-top: 2px;
   }
 </style>

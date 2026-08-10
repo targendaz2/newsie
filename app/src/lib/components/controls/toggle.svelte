@@ -26,16 +26,16 @@
     border: none;
     cursor: pointer;
     position: relative;
-    background: var(--toggle-off);
+    background: var(--color-toggle-off);
     transition: background 0.18s;
   }
 
   button.on {
-    background: var(--brand);
+    background: var(--color-brand);
   }
 
   button:focus-visible {
-    outline: 2px solid var(--focus-ring);
+    outline: 2px solid var(--color-focus-ring);
     outline-offset: 2px;
   }
 
@@ -46,7 +46,7 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background: var(--card);
+    background: var(--color-card);
     box-shadow: var(--shadow-knob);
     transition: left 0.18s;
   }

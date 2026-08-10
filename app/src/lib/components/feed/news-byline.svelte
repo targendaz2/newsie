@@ -32,12 +32,12 @@
 
   span.source {
     font-size: var(--text-meta);
-    font-weight: var(--weight-semibold);
-    color: var(--text-muted);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
   }
 
   time {
     font-size: var(--text-meta);
-    color: var(--text-faint);
+    color: var(--color-text-faint);
   }
 </style>

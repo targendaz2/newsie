@@ -18,20 +18,20 @@
     width: 100%;
     padding: 11px 15px;
     border-radius: var(--radius-input);
-    border: 1px solid var(--border-hairline);
-    background: var(--surface-card);
-    color: var(--text-body);
-    font-family: var(--font-ui);
+    border: 1px solid var(--color-border-hairline);
+    background: var(--color-surface-card);
+    color: var(--color-text-body);
+    font-family: var(--font-sans);
     font-size: var(--text-ui);
     outline: none;
   }
 
   input::placeholder {
-    color: var(--text-faint);
+    color: var(--color-text-faint);
   }
 
   input:focus {
-    outline: 2px solid var(--focus-ring);
+    outline: 2px solid var(--color-focus-ring);
     outline-offset: 2px;
   }
 </style>

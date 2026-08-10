@@ -20,6 +20,6 @@
 <style>
   div {
     display: flex;
-    gap: var(--space-2);
+    gap: var(--spacing-2);
   }
 </style>

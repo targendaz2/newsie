@@ -21,6 +21,6 @@
   }
 
   span.unread {
-    background: var(--brand);
+    background: var(--color-brand);
   }
 </style>

@@ -21,25 +21,25 @@
   button {
     border: none;
     cursor: pointer;
-    font-family: var(--font-ui);
+    font-family: var(--font-sans);
     font-size: var(--text-ctrl);
-    font-weight: var(--weight-semibold);
+    font-weight: var(--font-weight-semibold);
     padding: 7px 15px;
     border-radius: var(--radius-pill);
-    background: var(--chip-bg);
-    color: var(--text-muted);
+    background: var(--color-chip-bg);
+    color: var(--color-text-muted);
     transition:
       background 0.15s ease,
       color 0.15s ease;
   }
 
   button.active {
-    background: var(--brand);
-    color: var(--text-onaccent);
+    background: var(--color-brand);
+    color: var(--color-text-onaccent);
   }
 
   button:focus-visible {
-    outline: 2px solid var(--focus-ring);
+    outline: 2px solid var(--color-focus-ring);
     outline-offset: 2px;
   }
 </style>

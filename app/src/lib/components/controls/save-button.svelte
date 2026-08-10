@@ -28,15 +28,15 @@
     line-height: 1;
     cursor: pointer;
     padding: 2px;
-    color: var(--star-off);
+    color: var(--color-star-off);
   }
 
   button.saved {
-    color: var(--brand);
+    color: var(--color-brand);
   }
 
   button:focus-visible {
-    outline: 2px solid var(--focus-ring);
+    outline: 2px solid var(--color-focus-ring);
     outline-offset: 2px;
   }
 </style>

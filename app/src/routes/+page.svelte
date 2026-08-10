@@ -49,9 +49,9 @@
 
   h1 {
     margin: 0;
-    font-family: var(--font-display);
+    font-family: var(--font-serif);
     font-size: 27px;
-    font-weight: var(--weight-bold);
+    font-weight: var(--font-weight-bold);
     letter-spacing: var(--tracking-tight);
     line-height: 1;
   }
@@ -59,7 +59,7 @@
   header p {
     margin: 5px 0 0;
     font-size: var(--text-meta);
-    color: var(--text-muted);
+    color: var(--color-text-muted);
   }
 
   .actions {
@@ -87,6 +87,6 @@
   .river {
     flex: 1;
     overflow-y: auto;
-    border-top: 1px solid var(--border-hairline);
+    border-top: 1px solid var(--color-border-hairline);
   }
 </style>

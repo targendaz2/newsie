@@ -22,22 +22,22 @@
     border: none;
     background: none;
     cursor: pointer;
-    font-family: var(--font-ui);
+    font-family: var(--font-sans);
     font-size: var(--text-ctrl);
-    font-weight: var(--weight-semibold);
+    font-weight: var(--font-weight-semibold);
     white-space: nowrap;
     padding: 0 0 3px;
     border-bottom: 2px solid transparent;
-    color: var(--text-faint);
+    color: var(--color-text-faint);
   }
 
   button.active {
-    color: var(--text-body);
-    border-bottom-color: var(--brand);
+    color: var(--color-text-body);
+    border-bottom-color: var(--color-brand);
   }
 
   button:focus-visible {
-    outline: 2px solid var(--focus-ring);
+    outline: 2px solid var(--color-focus-ring);
     outline-offset: 2px;
   }
 </style>
