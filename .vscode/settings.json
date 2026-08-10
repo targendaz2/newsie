@@ -11,6 +11,11 @@
     "*.css": "css",
     "wrangler.json": "jsonc"
   },
+  "material-icon-theme.folders.associations": {
+    "components/controls": null,
+    "components/data": null,
+    "routes/sources": null
+  },
   "oxc.enable.oxfmt": true,
   "oxc.enable.oxlint": false,
   "oxc.requireConfig": true,
