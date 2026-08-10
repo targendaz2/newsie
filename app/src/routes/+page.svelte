@@ -32,7 +32,7 @@
   <TopicTabs topics={data.topics} />
 </div>
 
-<div class="river">
+<div class="feed">
   {#each data.newsItems as item (item.id)}
     <NewsCard newsItem={item} unread={!data.readIds.has(item.id)} saved={data.savedIds.has(item.id)} />
   {/each}
@@ -84,7 +84,7 @@
     flex-shrink: 0;
   }
 
-  .river {
+  .feed {
     flex: 1;
     overflow-y: auto;
     border-top: 1px solid var(--color-border-hairline);
