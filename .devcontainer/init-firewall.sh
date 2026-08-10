@@ -71,6 +71,7 @@ for domain in \
     "vscode.blob.core.windows.net" \
 	"mcp.cloudflare.com" \
 	"mcp.svelte.dev" \
+	"vercel-dns.com" \
     "update.code.visualstudio.com"; do
     echo "Resolving $domain..."
     ips=$(dig +noall +answer A "$domain" | awk '$4 == "A" {print $5}')
