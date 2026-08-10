@@ -88,12 +88,6 @@ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/
 # Install Claude
 RUN npm install -g @anthropic-ai/claude-code@${CLAUDE_CODE_VERSION}
 
-# Install Yarn
-ENV COREPACK_ENABLE_DOWNLOAD_PROMPT 0
-RUN /bin/sh -c set -eux; \
-    npm install -g corepack; \
-    corepack enable yarn
-
 
 # Copy and set up firewall script
 COPY init-firewall.sh /usr/local/bin/
