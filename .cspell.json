@@ -1,9 +1,38 @@
 {
   "version": "0.2",
-  "ignorePaths": [".vscode/**/*.json", ".cspell.json"],
+  "ignorePaths": [
+    ".vscode/**/*.json",
+    ".cspell.json"
+  ],
   "dictionaryDefinitions": [],
-  "dictionaries": ["en_US", "softwareTerms", "typescript", "node", "html", "css", "bash", "fonts", "filetypes", "npm"],
-  "words": ["Newsie"],
-  "ignoreWords": [],
+  "dictionaries": [
+    "en_US",
+    "softwareTerms",
+    "typescript",
+    "node",
+    "html",
+    "css",
+    "bash",
+    "fonts",
+    "filetypes",
+    "npm"
+  ],
+  "words": [
+    "affordances",
+    "blockifies",
+    "footgun",
+    "Newsie",
+    "oxlint",
+    "sandboxing",
+    "unwired",
+    "wordmark"
+  ],
+  "ignoreWords": [
+    "POSTROUTING",
+    "dport",
+    "ipsets",
+    "noall",
+    "onaccent"
+  ],
   "import": []
 }
