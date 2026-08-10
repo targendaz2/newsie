@@ -11,7 +11,7 @@
 </script>
 
 <div class="bar">
-  <button type="button" class="back">‹ Feed</button>
+  <button type="button" class="back">&#8249; Feed</button>
   <h1>Sources</h1>
   <span class="summary">{activeCount}/{data.sources.length}</span>
 </div>

@@ -10,7 +10,7 @@
 </script>
 
 <div class="bar">
-  <button type="button" class="back">‹ Feed</button>
+  <button type="button" class="back">&#8249; Feed</button>
   <div class="actions">
     <button type="button" class="save">☆ Save</button>
     <button type="button" class="share">Share</button>
