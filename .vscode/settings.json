@@ -5,6 +5,7 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.formatOnSave": true,
   "files.associations": {
@@ -20,5 +21,6 @@
   "oxc.enable.oxfmt": true,
   "oxc.enable.oxlint": false,
   "oxc.requireConfig": true,
-  "prettier.enable": false
+  "prettier.enable": false,
+  "cSpell.mergeCSpellSettings": false
 }
