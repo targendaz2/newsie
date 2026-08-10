@@ -1,6 +1,5 @@
 @import "normalize.css";
 @import "tokens/fonts.css";
-@import "tokens/typography.css";
 @import "tokens/radii.css";
 @import "tokens/shadows.css";
 
@@ -52,6 +51,29 @@
   --spacing-row-pad-y: 17px;
   --spacing-row-pad-y-compact: 12px;
   --spacing-control-gap: var(--spacing-2);
+
+  --text-h1: 28px;
+  --text-title: 27px;
+  --text-story: 16.5px;
+  --text-body: 16.5px;
+  --text-ui: 14px;
+  --text-ctrl: 13px;
+  --text-meta: 12px;
+  --text-excerpt: 13.5px;
+  --text-badge: 9px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --tracking-tight: -0.015em;
+  --tracking-badge: 0.08em;
+
+  --leading-tight: 1.2;
+  --leading-snug: 1.28;
+  --leading-normal: 1.42;
+  --leading-relaxed: 1.66;
 }
 
 body {
