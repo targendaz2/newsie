@@ -1,10 +1,41 @@
 @import "normalize.css";
 @import "tokens/fonts.css";
-@import "tokens/colors.css";
 @import "tokens/typography.css";
 @import "tokens/spacing.css";
 @import "tokens/radii.css";
 @import "tokens/shadows.css";
+
+:root {
+  --color-paper: #f4f1ea;
+  --color-card: #fbf9f4;
+  --color-ink: #26231d;
+  --color-muted: #8a8272;
+  --color-faint: #a39c8d;
+  --color-line: #e4dfd3;
+  --color-chip: #ece7db;
+  --color-star-off: #c3bba9;
+  --color-toggle-off: #d8d2c6;
+  --color-dashed: #cabfae;
+  --color-canvas: #d9d6cf;
+  --color-bezel-outer: #26231d;
+  --color-bezel-inner: #3a362e;
+  --color-accent: #b23a2e;
+  --color-accent-strong: #8f2c22;
+  --color-toast-bg: #26231d;
+  --color-toast-fg: #f4f1ea;
+  --color-surface-page: var(--color-paper);
+  --color-surface-card: var(--color-card);
+  --color-surface-desk: var(--color-canvas);
+  --color-text-body: var(--color-ink);
+  --color-text-muted: var(--color-muted);
+  --color-text-faint: var(--color-faint);
+  --color-text-onaccent: var(--color-paper);
+  --color-border-hairline: var(--color-line);
+  --color-brand: var(--color-accent);
+  --color-brand-hover: var(--color-accent-strong);
+  --color-chip-bg: var(--color-chip);
+  --color-focus-ring: var(--color-accent);
+}
 
 body {
   background: var(--surface-page);
