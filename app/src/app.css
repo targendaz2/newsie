@@ -6,6 +6,10 @@
 @import "tokens/shadows.css";
 
 :root {
+  --font-sans: "Public Sans", system-ui, -apple-system, sans-serif;
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
   --color-paper: #f4f1ea;
   --color-card: #fbf9f4;
   --color-ink: #26231d;
@@ -40,5 +44,5 @@
 body {
   background: var(--surface-page);
   color: var(--text-body);
-  font-family: var(--font-ui);
+  font-family: var(--font-sans);
 }

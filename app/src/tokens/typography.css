@@ -1,7 +1,4 @@
 :root {
-  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
-  --font-ui: "Public Sans", system-ui, -apple-system, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
   --text-h1: 28px;
   --text-title: 27px;
   --text-story: 16.5px;
