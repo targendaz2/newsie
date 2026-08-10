@@ -14,7 +14,7 @@ tasks:
     desc: Generate Cloudflare Workers type definitions for the app package
     dir: ./app
     sources:
-      - .vars.dev
+      - .dev.vars
       - wrangler.jsonc
     generates:
       - worker-configuration.d.ts
