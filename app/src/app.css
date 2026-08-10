@@ -1,6 +1,5 @@
 @import "normalize.css";
 @import "tokens/fonts.css";
-@import "tokens/radii.css";
 @import "tokens/shadows.css";
 
 :root {
@@ -74,6 +73,13 @@
   --leading-snug: 1.28;
   --leading-normal: 1.42;
   --leading-relaxed: 1.66;
+
+  --radius-badge: 5px;
+  --radius-toast: 12px;
+  --radius-input: 13px;
+  --radius-card: 14px;
+  --radius-device: 46px;
+  --radius-pill: 999px;
 }
 
 body {
