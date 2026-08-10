@@ -31,6 +31,7 @@ tasks:
       - exclude: src/**/*.story.ts
       - exclude: src/**/*.story.svelte
       - static/**/*
+      - svelte.config.js
       - tsconfig.json
       - vite.config.ts
     generates:
