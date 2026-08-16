@@ -1641,7 +1641,7 @@ __metadata:
     "@newsie/db": "workspace:*"
     "@storybook/addon-a11y": "npm:^10.5.8"
     "@storybook/addon-docs": "npm:^10.5.8"
-    "@storybook/addon-svelte-csf": "npm:^5.1.2"
+    "@storybook/addon-svelte-csf": "patch:@storybook/addon-svelte-csf@npm%3A5.1.2#~/.yarn/patches/@storybook-addon-svelte-csf-npm-5.1.2-f7e80064a6.patch"
     "@storybook/addon-themes": "npm:^10.5.8"
     "@storybook/addon-vitest": "npm:^10.5.8"
     "@storybook/sveltekit": "npm:^10.5.8"
@@ -2336,7 +2336,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-svelte-csf@npm:^5.1.2":
+"@storybook/addon-svelte-csf@npm:5.1.2":
   version: 5.1.2
   resolution: "@storybook/addon-svelte-csf@npm:5.1.2"
   dependencies:
@@ -2354,6 +2354,27 @@ __metadata:
     svelte: ^5.0.0
     vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
   checksum: 10c0/d51f28aded8a4f4a64b830c154c730388d3d573a584c7e55bd272325649db25f67cac8231b1c708581e7ed94af6419df3d997dd73eedbf55ff913bfae7be151d
+  languageName: node
+  linkType: hard
+
+"@storybook/addon-svelte-csf@patch:@storybook/addon-svelte-csf@npm%3A5.1.2#~/.yarn/patches/@storybook-addon-svelte-csf-npm-5.1.2-f7e80064a6.patch":
+  version: 5.1.2
+  resolution: "@storybook/addon-svelte-csf@patch:@storybook/addon-svelte-csf@npm%3A5.1.2#~/.yarn/patches/@storybook-addon-svelte-csf-npm-5.1.2-f7e80064a6.patch::version=5.1.2&hash=f0dad6"
+  dependencies:
+    "@storybook/csf": "npm:^0.1.13"
+    dedent: "npm:^1.5.3"
+    es-toolkit: "npm:^1.26.1"
+    esrap: "npm:^1.2.2"
+    magic-string: "npm:^0.30.12"
+    svelte-ast-print: "npm:^0.4.0"
+    zimmerframe: "npm:^1.1.2"
+  peerDependencies:
+    "@storybook/svelte": ^0.0.0-0 || ^8.2.0 || ^9.0.0 || ^9.1.0-0 || ^10.0.0-0 || ^10.1.0-0 || ^10.2.0-0 || ^10.3.0-0 || ^10.4.0-0
+    "@sveltejs/vite-plugin-svelte": ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
+    storybook: ^0.0.0-0 || ^8.2.0 || ^9.0.0 || ^9.1.0-0 || ^10.0.0-0 || ^10.1.0-0 || ^10.2.0-0 || ^10.3.0-0 || ^10.4.0-0
+    svelte: ^5.0.0
+    vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+  checksum: 10c0/55c3226a295c6361f2b5d68a5f44205389b263f6d75bd3e55252ce2a78ae083b43e71b2d1b5ca7d942f127cb668493ecebef3d6c3c242708e1726694be856158
   languageName: node
   linkType: hard
 

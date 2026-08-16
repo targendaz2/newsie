@@ -1,0 +1,32 @@
+diff --git a/dist/compiler/plugins.js b/dist/compiler/plugins.js
+index fa0159575bddcd2ed06b8d1034926e419846ab17..ea487611d79ad6bbcdd3a1fcebef9fbdccc82363 100644
+--- a/dist/compiler/plugins.js
++++ b/dist/compiler/plugins.js
+@@ -54,7 +54,10 @@ export async function transformPlugin() {
+         import('vite'),
+         import('@sveltejs/vite-plugin-svelte'),
+     ]);
+-    const svelteConfig = await loadSvelteConfig();
++    // this project has no svelte.config.js (config lives in vite.config.ts's
++    // sveltekit() call — @sveltejs/kit even errors if svelte.config.js exists), so skip
++    // the file lookup instead of letting vite-plugin-svelte warn "no Svelte config found".
++    const svelteConfig = await loadSvelteConfig(undefined, { configFile: false });
+     const include = /\.stories\.svelte$/;
+     const filter = createFilter(include);
+     return {
+diff --git a/dist/indexer/parser.js b/dist/indexer/parser.js
+index dcbc6fed82760697c9b516beeab4dc838edf4469..7238e33631909f99ff211f0e0f06c4372570dec8 100644
+--- a/dist/indexer/parser.js
++++ b/dist/indexer/parser.js
+@@ -17,7 +17,10 @@ export async function parseForIndexer(filename, options) {
+         import('@sveltejs/vite-plugin-svelte'),
+     ]);
+     const { legacyTemplate } = options;
+-    const svelteConfig = await loadSvelteConfig();
++    // this project has no svelte.config.js (config lives in vite.config.ts's
++    // sveltekit() call — @sveltejs/kit even errors if svelte.config.js exists), so skip
++    // the file lookup instead of letting vite-plugin-svelte warn "no Svelte config found".
++    const svelteConfig = await loadSvelteConfig(undefined, { configFile: false });
+     if (svelteConfig?.preprocess) {
+         code = (await preprocess(code, svelteConfig.preprocess, {
+             filename: filename,
