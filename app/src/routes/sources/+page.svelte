@@ -1,7 +1,8 @@
 <script lang="ts">
-  import { Button } from '$components/controls';
-  import { SourceCard } from '$components/sources';
   import { formatDistanceToNow } from 'date-fns';
+
+  import { Button } from '#components/controls';
+  import { SourceCard } from '#components/sources';
 
   import type { PageProps } from './$types';
 

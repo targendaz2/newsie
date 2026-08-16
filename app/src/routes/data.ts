@@ -1,5 +1,5 @@
 // Placeholder data until real fetching is wired up.
-import type { NewsItem, Source, Topic } from '$lib/types';
+import type { NewsItem, Source, Topic } from '#lib/types.js';
 
 const minutesAgo = (n: number) => new Date(Date.now() - n * 60_000);
 const hoursAgo = (n: number) => new Date(Date.now() - n * 60 * 60_000);

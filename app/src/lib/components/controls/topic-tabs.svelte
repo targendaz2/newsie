@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Topic } from '$lib/types';
+  import type { Topic } from '#lib/types.js';
 
   import TopicTab from './topic-tab.svelte';
 

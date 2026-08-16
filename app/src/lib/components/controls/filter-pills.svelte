@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { NewsFilter } from '$lib/types';
+  import type { NewsFilter } from '#lib/types.js';
 
   import FilterPill from './filter-pill.svelte';
 

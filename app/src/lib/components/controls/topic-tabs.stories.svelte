@@ -1,6 +1,7 @@
 <script module lang="ts">
-  import type { Topic } from '$lib/types';
   import { defineMeta } from '@storybook/addon-svelte-csf';
+
+  import type { Topic } from '#lib/types.js';
 
   import TopicTabs from './topic-tabs.svelte';
 

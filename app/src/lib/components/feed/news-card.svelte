@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { SaveButton } from '$components/controls';
-  import type { NewsItem } from '$lib/types';
+  import { SaveButton } from '#components/controls';
+  import type { NewsItem } from '#lib/types.js';
 
   import NewsByline from './news-byline.svelte';
   import UnreadDot from './unread-dot.svelte';

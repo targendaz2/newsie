@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Button, FilterPills, SearchBar, TopicTabs } from '$components/controls';
-  import { NewsCard } from '$components/feed';
+  import { Button, FilterPills, SearchBar, TopicTabs } from '#components/controls';
+  import { NewsCard } from '#components/feed';
 
   import type { PageProps } from './$types';
 

@@ -11,7 +11,7 @@ Newsie is a warm-newsprint, mobile-first personal RSS/news reader PWA (`newsie.s
 
 ## Load-bearing rules (don't skip these)
 
-- **Import components via `$components/*`**, not `$lib/components/*` — e.g. `import { Button } from '$components/controls';`. `$components` is a SvelteKit alias for `src/lib/components` (see `svelte.config.js`). Domain types still come from `$lib/types`.
+- **Import components via `#components/*`**, not `#lib/components/*` — e.g. `import { Button } from '#components/controls';`. `#components` is a subpath import declared in `package.json`'s `imports` field (Node's native mechanism, resolved natively by Vite/TypeScript — see `#lib` for the same pattern); its target pattern already ends in `/index.js`, so call sites don't repeat it. Domain types still come from `#lib/types.js`.
 - **This project uses `oxfmt`, not Prettier**, for formatting (`prettier.enable: false` in `.vscode/settings.json`). From the repo root: `./node_modules/.bin/oxfmt --check <files>` to verify, `./node_modules/.bin/oxfmt <files>` to auto-fix. Don't consider Svelte/TS work done until this passes.
 - **Every component `.svelte` file has a sibling `.stories.svelte`** — see docs/components.md for the established pattern, including the `template` snippet trick used for components that need a wrapping context to render correctly in isolation (e.g. `Toast`'s absolutely-positioned anchor, `SourceCard`'s required `<ul>` parent).
 - **No filled brand buttons**, except `ErrorPage`'s primary action — a documented, deliberate, single exception to the design system's own rule. Don't add a `filled` variant to the shared `Button` component for it; if something else seems to need one, ask first.

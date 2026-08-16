@@ -1,6 +1,6 @@
 # Components
 
-All components live under `src/lib/components/`, one folder per domain, each with a barrel `index.ts` exporting `PascalCase` names from `kebab-case.svelte` files. Import via the `$components` alias (see root of `CLAUDE.md`), e.g. `import { Button, SearchBar } from '$components/controls';`.
+All components live under `src/lib/components/`, one folder per domain, each with a barrel `index.ts` exporting `PascalCase` names from `kebab-case.svelte` files. Import via the `#components` subpath import (see root of `CLAUDE.md`), e.g. `import { Button, SearchBar } from '#components/controls';`.
 
 ```text
 controls/   — interactive primitives with no domain data of their own
@@ -25,7 +25,7 @@ These emerged through the course of building this set; they're not written down 
 - **Accessibility is added, not left to the visual spec.** The original design mockups (fetched from the Claude Design project — see below) are static HTML/CSS previews with no real interaction model; every component here has at least one accessibility addition beyond what the mockup showed: `:focus-visible` rings (`--color-focus-ring`), correct semantic elements (real `<button>`s instead of `<span onclick>`, `<h3>`/`<p>`/`<article>`/`<li>`/`<time datetime>` instead of generic `<div>`s where the content genuinely is a heading/paragraph/list item/timestamp), and ARIA where the semantic element alone doesn't communicate state (`aria-pressed`, `role="switch"` + `aria-checked`, `aria-label`, `role="status"`).
 - **`aria-pressed`, not `role="tab"`/`role="tablist"`.** `TopicTab`/`FilterPill` are independent, self-contained toggle buttons with no knowledge of their siblings, so they use `aria-pressed`. The full ARIA tabs pattern (`role="tablist"` + `role="tab"` + `aria-selected` + roving `tabindex` + arrow-key navigation) was implemented once for `TopicTabs`/`TopicTab` specifically, then deliberately reverted back to `aria-pressed` at the user's request — so don't reintroduce it without asking first; it's a known, considered rollback, not an oversight.
 - **`display: inline-block` on any `<span>`/inline element that sets `width`/`height`.** `width`/`height` are no-ops on `display: inline` elements. This bit `UnreadDot` once (worked fine nested in a flex row, where flex auto-blockifies children, but disappeared entirely once it was extracted into its own story with no flex parent) and `TypeBadge` was fixed proactively for the same reason. Check for this whenever a component sets an explicit size on a naturally-inline tag.
-- **Where a component composes another**, prefer the real component over hand-rolled markup *only* when the visual treatment actually matches. Where it doesn't — even by a single pixel of `font-size` or a different `letter-spacing` — build bespoke local markup instead of forcing a shared component to serve two different looks, *unless* the difference is reused in 2+ places, in which case the shared component gets a `variant` prop (see `TypeBadge`'s `chip`/`column` split, used by both the feed byline and `SourceCard`). One-off mismatches (the error page's status badge, the reader page's byline badge) stay local rather than growing `TypeBadge` a third variant for a single caller each.
+- **Where a component composes another**, prefer the real component over hand-rolled markup _only_ when the visual treatment actually matches. Where it doesn't — even by a single pixel of `font-size` or a different `letter-spacing` — build bespoke local markup instead of forcing a shared component to serve two different looks, _unless_ the difference is reused in 2+ places, in which case the shared component gets a `variant` prop (see `TypeBadge`'s `chip`/`column` split, used by both the feed byline and `SourceCard`). One-off mismatches (the error page's status badge, the reader page's byline badge) stay local rather than growing `TypeBadge` a third variant for a single caller each.
 
 ## Design source
 
@@ -68,7 +68,7 @@ The "● Live" / "◍ Offline · cached" network indicator. Real `<button>` (the
 
 ### `Toggle` (`toggle.svelte`)
 
-Generic iOS-style switch. Its label prop is **required**, no default — it's the switch's `aria-label`, and a generic fallback like `"Toggle"` would be a real accessibility regression for a control whose whole point is "toggle *what*". `role="switch"` + `aria-checked`.
+Generic iOS-style switch. Its label prop is **required**, no default — it's the switch's `aria-label`, and a generic fallback like `"Toggle"` would be a real accessibility regression for a control whose whole point is "toggle _what_". `role="switch"` + `aria-checked`.
 
 ### `TopicTab` (`topic-tab.svelte`)
 
@@ -96,13 +96,13 @@ Decorative filled/transparent dot. `aria-hidden="true"` — purely decorative, n
 
 ### `NewsByline` (`news-byline.svelte`)
 
-Badge + source name + relative time, one inline row — the feed's treatment, **not** the reader page's, which shows the badge and "source · time" on two separate stacked lines with different typography; that's intentionally *not* built by composing this component — see the `SourceTime` entry in docs/roadmap.md for why. Takes the whole `NewsItem`, not individual fields, so it can derive both the badge and the formatted time itself. Uses `date-fns`'s `formatDistanceToNow(..., { addSuffix: true })` for the visible text and `formatRFC3339` for the `<time datetime>` attribute.
+Badge + source name + relative time, one inline row — the feed's treatment, **not** the reader page's, which shows the badge and "source · time" on two separate stacked lines with different typography; that's intentionally _not_ built by composing this component — see the `SourceTime` entry in docs/roadmap.md for why. Takes the whole `NewsItem`, not individual fields, so it can derive both the badge and the formatted time itself. Uses `date-fns`'s `formatDistanceToNow(..., { addSuffix: true })` for the visible text and `formatRFC3339` for the `<time datetime>` attribute.
 
 ### `NewsCard` (`news-card.svelte`)
 
 The feed row. Its `unread` prop defaults to `true` — a freshly-fetched item is unread by default, deliberately different from `Toggle`'s own `false` default, since this reflects real domain semantics rather than a generic control default.
 
-Structural note, since it's non-obvious from the markup alone: the root is `<article>` (feed items are literally the HTML spec's own example use case for `<article>` — "an entry in a syndicated feed"), but the *click target* is a nested `<div class="hit-area" role="button" tabindex="0">`, not the `<article>` itself. This split exists because `role="button"` on a non-interactive semantic element like `<article>` is a real a11y-linter violation (element and ARIA role disagreeing), and because `SaveButton` needs to sit as a *sibling* of the hit-area, not a descendant — a real `<button>` (`SaveButton`) can't nest inside another real `<button>`, and even setting that aside, keeping it a sibling means a click on the star never bubbles into the row's own open-handler in the first place, rather than relying on `SaveButton`'s internal `stopPropagation()` as the only thing preventing that.
+Structural note, since it's non-obvious from the markup alone: the root is `<article>` (feed items are literally the HTML spec's own example use case for `<article>` — "an entry in a syndicated feed"), but the _click target_ is a nested `<div class="hit-area" role="button" tabindex="0">`, not the `<article>` itself. This split exists because `role="button"` on a non-interactive semantic element like `<article>` is a real a11y-linter violation (element and ARIA role disagreeing), and because `SaveButton` needs to sit as a _sibling_ of the hit-area, not a descendant — a real `<button>` (`SaveButton`) can't nest inside another real `<button>`, and even setting that aside, keeping it a sibling means a click on the star never bubbles into the row's own open-handler in the first place, rather than relying on `SaveButton`'s internal `stopPropagation()` as the only thing preventing that.
 
 ---
 

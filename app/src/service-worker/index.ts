@@ -4,24 +4,20 @@
 /// <reference lib="esnext" />
 /// <reference lib="webworker" />
 
-// Ensures that the `$service-worker` import has proper type definitions
+// Ensures that the `$app/*` service-worker imports have proper type definitions
 /// <reference types="@sveltejs/kit" />
 
 // Only necessary if you have an import from `$env/static/public`
-/// <reference types="../.svelte-kit/ambient.d.ts" />
+/// <reference types="../../.svelte-kit/ambient.d.ts" />
 
-import { build, files, version } from '$service-worker';
-
-// This gives `self` the correct types
-const self = globalThis.self as unknown as ServiceWorkerGlobalScope;
+import { version } from '$app/env';
+import { assets, immutable } from '$app/manifest';
+import { self } from '$app/service-worker';
 
 // Create a unique cache name for this deployment
 const CACHE = `cache-${version}`;
 
-const ASSETS = [
-  ...build, // the app itself
-  ...files, // everything in `static`
-];
+const ASSETS = [...immutable, ...assets].map(({ path }) => path);
 
 self.addEventListener('install', (event) => {
   // Create a new cache and add all files to it
@@ -52,7 +48,7 @@ self.addEventListener('fetch', (event) => {
     const url = new URL(event.request.url);
     const cache = await caches.open(CACHE);
 
-    // `build`/`files` can always be served from the cache
+    // `ASSETS` can always be served from the cache
     if (ASSETS.includes(url.pathname)) {
       const response = await cache.match(url.pathname);
 
