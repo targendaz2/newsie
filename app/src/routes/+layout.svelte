@@ -7,6 +7,7 @@
 </script>
 
 <svelte:head>
+  <title>Newsie</title>
   <link rel="icon" href={favicon} />
 </svelte:head>
 
