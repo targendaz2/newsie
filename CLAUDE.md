@@ -4,11 +4,15 @@
 - **Package Manager**: yarn
 - **Add-ons**: prettier, eslint, sveltekit-adapter, storybook, experimental, ai-tools
 
+## Devcontainer
+
+- The devcontainer restricts outbound network access to an explicit domain allowlist. If a tool can't reach a host it needs, see [.devcontainer/README.md](.devcontainer/README.md) before editing the firewall script — in particular, changes to it require a full container rebuild, not a live re-run.
+
 ---
 
 You are able to use the Svelte MCP server, where you have access to comprehensive Svelte 5 and SvelteKit documentation. Here's how to use the available tools effectively:
 
-## Available Svelte MCP Tools:
+## Available Svelte MCP Tools
 
 ### 1. list-sections
 
