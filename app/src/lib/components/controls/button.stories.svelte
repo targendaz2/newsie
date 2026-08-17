@@ -1,6 +1,6 @@
 <script module>
   import { defineMeta } from '@storybook/addon-svelte-csf';
-  import { fn } from 'storybook/test';
+  import { expect, fn, userEvent } from 'storybook/test';
 
   import Button from './button.svelte';
 
@@ -44,3 +44,22 @@
 
 <!-- Disabled outline pill — Mark as read -->
 <Story name="Disabled" args={{ variant: 'outline', children: markAsRead, disabled: true }} />
+
+<!-- Clicking an enabled button fires onclick -->
+<Story
+  name="Click fires onclick"
+  args={{ variant: 'outline', children: markAsRead }}
+  play={async ({ args, canvas }) => {
+    await userEvent.click(canvas.getByRole('button', { name: 'Mark as read' }));
+    await expect(args.onclick).toHaveBeenCalledOnce();
+  }}
+/>
+
+<!-- A disabled button is unclickable, so it can never fire onclick -->
+<Story
+  name="Disabled ignores clicks"
+  args={{ variant: 'outline', children: markAsRead, disabled: true }}
+  play={async ({ canvas }) => {
+    await expect(canvas.getByRole('button', { name: 'Mark as read' })).toBeDisabled();
+  }}
+/>
