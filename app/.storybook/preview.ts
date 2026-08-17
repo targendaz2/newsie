@@ -11,6 +11,10 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+      // SvelteKit augments every element's HTMLAttributes with these link-preloading/navigation
+      // attributes (see .svelte-kit/non-ambient.d.ts), so they type-check on any component whose
+      // Props extends an HTMLAttributes-derived type — not just <a>. They're inert noise here.
+      exclude: /^data-sveltekit-/,
     },
     options: {
       storySort: {
