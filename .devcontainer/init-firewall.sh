@@ -70,9 +70,11 @@ for domain in \
     "marketplace.visualstudio.com" \
     "vscode.blob.core.windows.net" \
 	"dash.cloudflare.com" \
+	"api.cloudflare.com" \
 	"mcp.cloudflare.com" \
 	"mcp.svelte.dev" \
 	"vercel-dns.com" \
+	"taskfile.dev" \
     "update.code.visualstudio.com"; do
     echo "Resolving $domain..."
     ips=$(dig +noall +answer A "$domain" | awk '$4 == "A" {print $5}')

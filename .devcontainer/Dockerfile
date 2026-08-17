@@ -65,8 +65,8 @@ ENV DEVCONTAINER=true
 
 # Create workspace and config directories and set permissions
 RUN /bin/sh -c set -eux; \
-  mkdir -p /workspace /home/node/.claude; \
-  chown -R node:node /workspace /home/node/.claude
+  mkdir -p /workspace /home/node/.claude /home/node/.config/.wrangler; \
+  chown -R node:node /workspace /home/node/.claude /home/node/.config
 
 WORKDIR /workspace
 
