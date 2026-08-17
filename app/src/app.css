@@ -83,10 +83,16 @@
   --shadow-toast: 0 12px 30px -8px rgba(0, 0, 0, 0.4);
   --shadow-device: 0 34px 70px -24px rgba(30, 26, 20, 0.5);
   --shadow-knob: 0 1px 3px rgba(0, 0, 0, 0.25);
+  
+  overscroll-behavior-y: none;
 }
 
 body {
   background: var(--color-surface-page);
   color: var(--color-text-body);
   font-family: var(--font-sans);
+}
+
+button, a, label, input {
+    -webkit-tap-highlight-color: transparent;
 }
