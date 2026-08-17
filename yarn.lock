@@ -2359,7 +2359,7 @@ __metadata:
 
 "@storybook/addon-svelte-csf@patch:@storybook/addon-svelte-csf@npm%3A5.1.2#~/.yarn/patches/@storybook-addon-svelte-csf-npm-5.1.2-f7e80064a6.patch":
   version: 5.1.2
-  resolution: "@storybook/addon-svelte-csf@patch:@storybook/addon-svelte-csf@npm%3A5.1.2#~/.yarn/patches/@storybook-addon-svelte-csf-npm-5.1.2-f7e80064a6.patch::version=5.1.2&hash=f0dad6"
+  resolution: "@storybook/addon-svelte-csf@patch:@storybook/addon-svelte-csf@npm%3A5.1.2#~/.yarn/patches/@storybook-addon-svelte-csf-npm-5.1.2-f7e80064a6.patch::version=5.1.2&hash=154721"
   dependencies:
     "@storybook/csf": "npm:^0.1.13"
     dedent: "npm:^1.5.3"
@@ -2374,7 +2374,7 @@ __metadata:
     storybook: ^0.0.0-0 || ^8.2.0 || ^9.0.0 || ^9.1.0-0 || ^10.0.0-0 || ^10.1.0-0 || ^10.2.0-0 || ^10.3.0-0 || ^10.4.0-0
     svelte: ^5.0.0
     vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
-  checksum: 10c0/55c3226a295c6361f2b5d68a5f44205389b263f6d75bd3e55252ce2a78ae083b43e71b2d1b5ca7d942f127cb668493ecebef3d6c3c242708e1726694be856158
+  checksum: 10c0/cc8044bff5dd217e178bb4a9a2c2a1d5dabfec2c83b0535946004907107fbf170432badf2941ec7a70f63edc5026ab1f29a6d9b58f558e6d79e7ed481a4e0c20
   languageName: node
   linkType: hard
 
@@ -2737,12 +2737,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^26.1.2":
-  version: 26.1.2
-  resolution: "@types/node@npm:26.1.2"
+"@types/node@npm:^24.0.0":
+  version: 24.13.3
+  resolution: "@types/node@npm:24.13.3"
   dependencies:
-    undici-types: "npm:~8.3.0"
-  checksum: 10c0/a45503222c7db8f374afd5c9381db63dd95b6b1f703abea0890dd3d4a09eeb41da489e08a1a45baf18fe89fb77fbf310ff2789f680c490b04dafc41a60800a86
+    undici-types: "npm:~7.18.0"
+  checksum: 10c0/a5bc08f49b9581dcdca90e02cd77197a3c799840807664942e5cd5161a553d4d2ae8064f7e3294410d748d7d098b5c1848be7fa50c06f29c4193ab16be4e59eb
   languageName: node
   linkType: hard
 
@@ -5688,7 +5688,7 @@ __metadata:
   resolution: "newsie-workspace@workspace:."
   dependencies:
     "@eslint/js": "npm:^10.0.1"
-    "@types/node": "npm:^26.1.2"
+    "@types/node": "npm:^24.0.0"
     cspell: "npm:^10.0.1"
     eslint: "npm:^10.8.1"
     eslint-config-prettier: "npm:^10.1.8"
@@ -6941,10 +6941,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~8.3.0":
-  version: 8.3.0
-  resolution: "undici-types@npm:8.3.0"
-  checksum: 10c0/c8aa7e2fbebfce519654dafadc0ece59be888d2ccaf180fb4495da875e7b536d2456345c384069c7e6f3e9c9ab7435f074957da306f142343eee86ff8048855a
+"undici-types@npm:~7.18.0":
+  version: 7.18.2
+  resolution: "undici-types@npm:7.18.2"
+  checksum: 10c0/85a79189113a238959d7a647368e4f7c5559c3a404ebdb8fc4488145ce9426fcd82252a844a302798dfc0e37e6fb178ff481ed03bc4caf634c5757d9ef43521d
   languageName: node
   linkType: hard
 
