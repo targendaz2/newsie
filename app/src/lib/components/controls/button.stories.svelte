@@ -21,56 +21,52 @@
   });
 </script>
 
-{#snippet refresh()}
-  ↻ Refresh
-{/snippet}
-
-{#snippet markAsRead()}
-  Mark as read
-{/snippet}
-
-{#snippet addSource()}
-  + Add a source
-{/snippet}
-
 <!-- Quiet text link — Refresh, Sources -->
 <Story
   name="Link"
-  args={{ variant: 'link', children: refresh }}
+  args={{ variant: 'link' }}
   play={async ({ args, canvas }) => {
     const button = canvas.getByRole('button', { name: '↻ Refresh' });
     await fireEvent.click(button);
     await expect(args.onclick).toHaveBeenCalledOnce();
   }}
-/>
+>
+  ↻ Refresh
+</Story>
 
 <!-- Outline pill — Mark as read -->
 <Story
   name="Outline"
-  args={{ variant: 'outline', children: markAsRead }}
+  args={{ variant: 'outline' }}
   play={async ({ args, canvas }) => {
     const button = canvas.getByRole('button', { name: 'Mark as read' });
     await fireEvent.click(button);
     await expect(args.onclick).toHaveBeenCalledOnce();
   }}
-/>
+>
+  Mark as read
+</Story>
 
 <!-- Dashed full-width affordance — + Add a source -->
 <Story
   name="Dashed"
-  args={{ variant: 'dashed', children: addSource }}
+  args={{ variant: 'dashed' }}
   play={async ({ args, canvas }) => {
     const button = canvas.getByRole('button', { name: '+ Add a source' });
     await fireEvent.click(button);
     await expect(args.onclick).toHaveBeenCalledOnce();
   }}
-/>
+>
+  + Add a source
+</Story>
 
 <!-- Disabled outline pill — Mark as read -->
 <Story
   name="Disabled"
-  args={{ variant: 'outline', children: markAsRead, disabled: true }}
+  args={{ variant: 'outline', disabled: true }}
   play={async ({ canvas }) => {
     await expect(canvas.getByRole('button', { name: 'Mark as read' })).toBeDisabled();
   }}
-/>
+>
+  Mark as read
+</Story>
