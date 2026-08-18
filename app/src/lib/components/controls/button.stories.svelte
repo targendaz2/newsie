@@ -1,6 +1,6 @@
 <script module>
   import { defineMeta } from '@storybook/addon-svelte-csf';
-  import { expect, fn, userEvent } from 'storybook/test';
+  import { expect, fireEvent, fn } from 'storybook/test';
 
   import Button from './button.svelte';
 
@@ -34,30 +34,41 @@
 {/snippet}
 
 <!-- Quiet text link — Refresh, Sources -->
-<Story name="Link" args={{ variant: 'link', children: refresh }} />
-
-<!-- Outline pill — Mark as read -->
-<Story name="Outline" args={{ variant: 'outline', children: markAsRead }} />
-
-<!-- Dashed full-width affordance — + Add a source -->
-<Story name="Dashed" args={{ variant: 'dashed', children: addSource }} />
-
-<!-- Disabled outline pill — Mark as read -->
-<Story name="Disabled" args={{ variant: 'outline', children: markAsRead, disabled: true }} />
-
-<!-- Clicking an enabled button fires onclick -->
 <Story
-  name="Click fires onclick"
-  args={{ variant: 'outline', children: markAsRead }}
+  name="Link"
+  args={{ variant: 'link', children: refresh }}
   play={async ({ args, canvas }) => {
-    await userEvent.click(canvas.getByRole('button', { name: 'Mark as read' }));
+    const button = canvas.getByRole('button', { name: '↻ Refresh' });
+    await fireEvent.click(button);
     await expect(args.onclick).toHaveBeenCalledOnce();
   }}
 />
 
-<!-- A disabled button is unclickable, so it can never fire onclick -->
+<!-- Outline pill — Mark as read -->
 <Story
-  name="Disabled ignores clicks"
+  name="Outline"
+  args={{ variant: 'outline', children: markAsRead }}
+  play={async ({ args, canvas }) => {
+    const button = canvas.getByRole('button', { name: 'Mark as read' });
+    await fireEvent.click(button);
+    await expect(args.onclick).toHaveBeenCalledOnce();
+  }}
+/>
+
+<!-- Dashed full-width affordance — + Add a source -->
+<Story
+  name="Dashed"
+  args={{ variant: 'dashed', children: addSource }}
+  play={async ({ args, canvas }) => {
+    const button = canvas.getByRole('button', { name: '+ Add a source' });
+    await fireEvent.click(button);
+    await expect(args.onclick).toHaveBeenCalledOnce();
+  }}
+/>
+
+<!-- Disabled outline pill — Mark as read -->
+<Story
+  name="Disabled"
   args={{ variant: 'outline', children: markAsRead, disabled: true }}
   play={async ({ canvas }) => {
     await expect(canvas.getByRole('button', { name: 'Mark as read' })).toBeDisabled();
