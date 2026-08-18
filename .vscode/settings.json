@@ -11,6 +11,7 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "cSpell.mergeCSpellSettings": false,
   "docker.languageserver.formatter.ignoreMultilineInstructions": true,
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.formatOnSave": true,
@@ -27,6 +28,6 @@
   "oxc.enable.oxfmt": true,
   "oxc.enable.oxlint": false,
   "oxc.requireConfig": true,
-  "prettier.enable": false,
-  "cSpell.mergeCSpellSettings": false
+  "oxc.useExecPath": true,
+  "prettier.enable": false
 }
