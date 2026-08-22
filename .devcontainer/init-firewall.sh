@@ -77,6 +77,7 @@ for domain in \
 	"taskfile.dev" \
 	"globalsecurelayer.com" \
 	"yarnpkg.com" \
+	"githubcopilot.com" \
 	"cdn.playwright.dev" \
 	"playwright.download.prss.microsoft.com" \
     "update.code.visualstudio.com"; do
