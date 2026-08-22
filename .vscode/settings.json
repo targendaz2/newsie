@@ -19,6 +19,8 @@
     "*.css": "css",
     "wrangler.json": "jsonc"
   },
+  "js/ts.experimental.useTsgo": true,
+  "js/ts.tsdk.path": "./node_modules/typescript",
   "material-icon-theme.folders.associations": {
     "components/controls": null,
     "components/data": null,
