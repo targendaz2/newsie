@@ -34,7 +34,8 @@
         "redhat.vscode-yaml",
         "mads-hartmann.bash-ide-vscode",
         "ms-azuretools.vscode-containers",
-        "timonwong.shellcheck"
+        "timonwong.shellcheck",
+        "TypeScriptTeam.native-preview"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh",
