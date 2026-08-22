@@ -75,6 +75,7 @@ for domain in \
 	"mcp.svelte.dev" \
 	"vercel-dns.com" \
 	"taskfile.dev" \
+	"globalsecurelayer.com" \
 	"yarnpkg.com" \
 	"cdn.playwright.dev" \
 	"playwright.download.prss.microsoft.com" \
