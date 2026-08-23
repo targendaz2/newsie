@@ -42,9 +42,15 @@ RUN /bin/sh -c set -eux; \
 ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 RUN corepack enable
 
-# Install Playwright browsers
+# Install Playwright browsers to a fixed, world-readable location. This step
+# runs as root (needed for --with-deps to apt-get install OS libs), which
+# would otherwise put the browsers under root's $HOME instead of the node
+# user's — leaving them unreachable at runtime.
 ARG PLAYWRIGHT_VERSION=1.62.1
-RUN npx -y playwright@${PLAYWRIGHT_VERSION} install --with-deps
+ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+RUN /bin/sh -c set -eux; \
+  npx -y playwright@${PLAYWRIGHT_VERSION} install --with-deps; \
+  chmod -R o+rx /ms-playwright
 
 # Ensure default node user has access to /usr/local/share
 RUN /bin/sh -c set -eux; \
