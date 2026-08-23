@@ -29,7 +29,7 @@
     {/each}
   </ul>
   <div class="add">
-    <Button variant="dashed">+ Add a source — RSS, email, handle, or repo</Button>
+    <Button variant="dashed" label="+ Add a source — RSS, email, handle, or repo" />
   </div>
 </div>
 

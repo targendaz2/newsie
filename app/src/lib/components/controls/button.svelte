@@ -1,5 +1,4 @@
 <script lang="ts">
-  import type { Snippet } from 'svelte';
   import type { HTMLButtonAttributes } from 'svelte/elements';
 
   interface Props extends HTMLButtonAttributes {
@@ -9,18 +8,18 @@
      */
     variant?: 'link' | 'outline' | 'dashed';
 
-    /** Button content. */
-    children: Snippet;
+    /** Button label text. */
+    label: string;
 
     /** The onclick event handler */
     onclick?: () => void;
   }
 
-  const { variant = 'link', children, onclick, ...rest }: Props = $props();
+  const { variant = 'link', label, onclick, ...rest }: Props = $props();
 </script>
 
 <button type="button" class={variant} {onclick} {...rest}>
-  {@render children()}
+  {label}
 </button>
 
 <style>

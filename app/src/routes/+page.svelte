@@ -15,8 +15,8 @@
     <p>{unreadCount} unread</p>
   </div>
   <div class="actions">
-    <Button variant="link">⊟ Sources</Button>
-    <Button variant="link">↻ Refresh</Button>
+    <Button variant="link" label="⊟ Sources" />
+    <Button variant="link" label="↻ Refresh" />
   </div>
 </header>
 
