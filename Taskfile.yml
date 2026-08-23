@@ -21,6 +21,12 @@ tasks:
     cmds:
       - yarn cf-typegen
 
+  test:app:
+    desc: Run unit tests for the app
+    dir: ./app
+    cmds:
+      - yarn test
+
   build:app:
     desc: Build the app package
     dir: ./app
