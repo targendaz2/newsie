@@ -1,8 +1,25 @@
+# Newsie
+
+Newsie is a warm-newsprint, mobile-first personal RSS/news reader PWA (`newsie.site`).
+
 ## Project Configuration
 
 - **Language**: TypeScript
 - **Package Manager**: yarn
-- **Add-ons**: prettier, eslint, sveltekit-adapter, storybook, experimental, ai-tools
+- **Add-ons**: prettier, eslint, sveltekit-adapter, storybook, experimental, ai-tools — note: formatting is actually done by `oxfmt`, not Prettier (see Commands below); `eslint-config-prettier` is only present to disable ESLint rules that would fight `oxfmt`.
+
+## Workspaces
+
+Yarn-workspaces monorepo:
+
+- **`app/`** — SvelteKit 5 frontend (the `newsie.site` PWA). See [app/CLAUDE.md](app/CLAUDE.md).
+- **`packages/db`** — Drizzle ORM schema/migrations for the D1 database.
+- **`workers/feed-reader`** — Cloudflare Worker backend. See [workers/feed-reader/CLAUDE.md](workers/feed-reader/CLAUDE.md).
+
+## Commands
+
+- **Format**: `yarn format` (fix) / `yarn format:check` (verify) — runs `oxfmt` across every workspace. This project uses `oxfmt`, not Prettier, for all formatting (`prettier.enable: false` in `.vscode/settings.json`) — `prettier`/`eslint-config-prettier` in devDependencies exist only to stop ESLint fighting `oxfmt`'s formatting choices. Don't consider TS/Svelte/JSON work done until `format:check` passes. The binary lives only in the root `node_modules/.bin/oxfmt` (no per-workspace copy).
+- **Cross-workspace tasks**: see [Taskfile.yml](Taskfile.yml) — e.g. `task test:app`, `task build:app`, `task deploy:app`, `task storybook`, `task cf-typegen` (regenerates Cloudflare types for all of `app`/`packages/db`/`workers/feed-reader` at once).
 
 ## Devcontainer
 
