@@ -1,6 +1,9 @@
 {
   "extends": "$app/tsconfig",
   "compilerOptions": {
+    // `wrangler types` emits `typeof import("./.svelte-kit/cloudflare/_worker")` once a build
+    // exists, pulling compiled JS into the program. All app code is TS/Svelte, so don't check JS.
+    "checkJs": false,
     "rewriteRelativeImportExtensions": true,
     "sourceMap": true,
     "strict": true,

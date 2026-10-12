@@ -6,7 +6,7 @@ The `app` workspace in the yarn monorepo — the SvelteKit 5 frontend. See the r
 
 - **[docs/design-system.md](docs/design-system.md)** — design tokens (colors, spacing, typography, radii, shadows), content/tone rules, icon policy.
 - **[docs/components.md](docs/components.md)** — full component inventory (props, behavior, accessibility choices) and the conventions every component follows.
-- **[docs/routes-and-data.md](docs/routes-and-data.md)** — domain types (`$lib/types.ts`), the placeholder-data loading pattern, and the current route map.
+- **[docs/routes-and-data.md](docs/routes-and-data.md)** — domain types (`#lib/types.ts`), the placeholder-data loading pattern, and the current route map.
 - **[docs/roadmap.md](docs/roadmap.md)** — what's deliberately not built yet, and why. Read this before assuming a gap is an oversight — most are explicit deferrals, and several have genuinely open questions rather than an obvious answer. Ask before filling one in.
 
 ## Load-bearing rules (don't skip these)

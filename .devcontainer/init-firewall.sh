@@ -80,6 +80,7 @@ for domain in \
 	"githubcopilot.com" \
 	"cdn.playwright.dev" \
 	"playwright.download.prss.microsoft.com" \
+	"schemastore.org" \
     "update.code.visualstudio.com"; do
     echo "Resolving $domain..."
     ips=$(dig +noall +answer A "$domain" | awk '$4 == "A" {print $5}')
